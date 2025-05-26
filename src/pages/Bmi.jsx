@@ -12,8 +12,6 @@ const navigate = useNavigate();
   const [idealWeight, setIdealWeight] = useState(null);
 	const [image, setImage] = useState("");
 	
-  
-
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
     if (!user) {
@@ -22,7 +20,7 @@ const navigate = useNavigate();
         title: "غير مصرح",
         text: "يرجى تسجيل الدخول أولًا",
       }).then(() => {
-        navigate("/login");
+        navigate("/signin");
       });
     }
   }, []);
@@ -69,7 +67,7 @@ const navigate = useNavigate();
         placeholder="الوزن بالكيلوجرام"
         value={weight}
         onChange={(e) => setWeight(e.target.value)}
-        className="w-full border p-2 rounded"
+        className="w-full border border-amber-500 p-2 rounded"
       />
 
       <input
@@ -77,7 +75,7 @@ const navigate = useNavigate();
         placeholder="الطول بالسنتيمتر"
         value={height}
         onChange={(e) => setHeight(e.target.value)}
-        className="w-full border p-2 rounded"
+        className="w-full border border-amber-500 p-2 rounded"
       />
 
       <button

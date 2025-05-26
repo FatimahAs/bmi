@@ -14,6 +14,8 @@ export default function Home() {
         title: "يجب تسجيل الدخول",
         text: "يرجى تسجيل الدخول أولًا للوصول إلى حاسبة الكتلة",
         confirmButtonText: "حسنًا",
+      }).then(() => {
+        navigate("/signin");
       });
     }
   };
