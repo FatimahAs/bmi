@@ -6,7 +6,7 @@ export default function Home() {
 
   const handleStart = () => {
     const user = JSON.parse(localStorage.getItem("loggedInUser"));
-    if (user) {
+    if (user ) {
       navigate("/bmi");
     } else {
       Swal.fire({
@@ -26,7 +26,7 @@ export default function Home() {
 	 
 	  <div className="flex flex-col justify-center items-center h-screen   text-center">
 		  <img src="/body-mass.png" className="w-40 h-40 mb-5"/>
-      <h1 className="text-3xl  font-medium text-gray-700 mb-4">مرحبًا بك في حاسبة كتلة الجسم</h1>
+      <h1 className="text-2xl  font-medium text-gray-700 mb-4">مرحبًا بك في حاسبة كتلة الجسم</h1>
       <p className="text-gray-700 mb-8">اكتشف حالتك الصحية بناءً على طولك ووزنك</p>
       <button
         onClick={handleStart}
